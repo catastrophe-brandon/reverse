@@ -5,11 +5,7 @@ def stack_based_reverse(some_str):
     for c in to_reverse:
         work.insert(0, c)
 
-    result = []
-    while len(work) > 0:
-        result.insert(0, work.pop())
-
-    return ''.join(result)
+    return ''.join(work)
 
 
 if __name__ == '__main__':
