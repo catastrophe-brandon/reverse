@@ -11,10 +11,8 @@ def linear_reverse(some_str):
     return ''.join(result)
 
 def barf_reverse(some_str):
-    """ REALLY ugly but appeals to the Java and C# folks that think Python is too simple. """
-    for c in reversed(some_str.split()):
-        print(c)
-    return ''.join([somechar for somechar in reversed(some_str.split())])
+    """ Readability--; """
+    return ''.join([somechar for somechar in reversed(some_str)])
 
 def stack_based_reverse(some_str):
     """ Use a list like a stack, push all the chars in and pop them off """
@@ -31,8 +29,7 @@ def pythonic_reverse(some_str):
 if __name__ == '__main__':
     to_reverse = 'reverse'
     print('String to reverse: {}'.format(to_reverse))
-    print(stack_based_reverse(to_reverse))
-
+    print('Stack based reverse: {}'.format(stack_based_reverse(to_reverse)))
     print('Pythonic reverse: {}'.format(pythonic_reverse(to_reverse)))
     print('Barf reverse: {}'.format(barf_reverse(to_reverse)))
     print('Linear reverse: {}'.format(linear_reverse(to_reverse)))
